@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images:{
-    domains:[
-       "encrypted-tbn0.gstatic.com",
-       "shxrigmsftdzalrerfeu.supabase.co"
+    remotePatterns:[{
+        hostname: "encrypted-tbn0.gstatic.com",
+        hostname : "shxrigmsftdzalrerfeu.supabase.co"
+    }
+       
     ]
     }
 };

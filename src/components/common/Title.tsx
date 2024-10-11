@@ -1,5 +1,4 @@
 import React from "react";
-import { IconBase } from "react-icons";
 
 type titleProps = {
   title: string;
@@ -8,7 +7,7 @@ type titleProps = {
   className?:string;
 };
 
-const Title = ({ title, color_title, icon, className }: titleProps) => {
+const Title = ({ title, color_title, className }: titleProps) => {
   return (
     <div className={`flex flex-col items-center justify-center gap-2 ${className} `}>
       <h1 className="text-2xl text-center">

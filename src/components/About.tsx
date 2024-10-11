@@ -2,15 +2,7 @@
 import React from "react";
 import Title from "./common/Title";
 import { IoArrowRedoOutline } from "react-icons/io5";
-import EducationCard from "./common/EducationCard";
-import { FloatingDock } from "./ui/FloatingDoc";
-
-import { MdCastForEducation } from "react-icons/md";
-import { GrProjects } from "react-icons/gr";
-import { FaCode, FaLinkedinIn } from "react-icons/fa";
-import { IconBrandGithub, IconHome, IconTerminal2 } from "@tabler/icons-react";
 import Image from "next/image";
-import { Spotlight } from "./ui/Spotlight";
 import { useInfo } from "@/context/infoContext";
 
 

@@ -2,11 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { TextGenerateEffect } from "./ui/TextGeneratingEffect";
 import MagicButton from "./ui/MagicButton";
-import { FaDownload, FaLocationArrow } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 import { FloatingDock } from "./ui/FloatingDoc";
-import { IoArrowRedoOutline } from "react-icons/io5";
-import EducationCard from "./common/EducationCard";
-
 import { MdCastForEducation } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import { FaCode, FaLinkedinIn } from "react-icons/fa";
@@ -15,8 +12,7 @@ import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import { Typewriter } from "react-simple-typewriter";
 import { supabase } from "@/utils/supebase/client";
-import { cursorDataType, infoTypes } from "@/types";
-import { join } from "path/win32";
+import { cursorDataType } from "@/types";
 import { useInfo } from "@/context/infoContext";
 
 export const docLinks = [
@@ -75,7 +71,7 @@ export const docLinks = [
 ];
 
 const Hero = () => {
-  const { loading, info } = useInfo();
+  const {  info } = useInfo();
   const [myCursorData, setMyCursorData] = useState<cursorDataType[]>();
 
   useEffect(() => {
@@ -117,7 +113,7 @@ const Hero = () => {
         <div className="flex  items-center justify-center  absolute top-20 right-0 w-full ">
           <div className="flex flex-col-reverse gap-5 w-full  justify-center  items-center max-w-[89vw] md:max-w-3xl lg:max-w-[80vw] sm:flex sm:flex-row sm:justify-between sm:items-center  sm:gap-2 my-10 ">
             <div className="flex-1 flex flex-col space-y-4  mt-5 items-center justify-center w-full sm:items-start sm:pl-3 sm:flex-col sm:mt-0 relative">
-              <h1 className="text-2xl">Hello! I'm {info?.username} 👋 </h1>
+              <h1 className="text-2xl">Hello! I &apos; m {info?.username} 👋 </h1>
               <TextGenerateEffect
                 words={
                   (info && info?.textGenerator) ||

@@ -2,10 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
-import { IconType } from "react-icons";
 import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
 import * as AiIcons from 'react-icons/ai';
@@ -22,7 +19,7 @@ export const CardHover = ({
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const iconLibraries: { [key: string]: any } = {
     ...FaIcons,

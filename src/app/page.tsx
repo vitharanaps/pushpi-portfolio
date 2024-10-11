@@ -1,7 +1,6 @@
 "use client"
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import Image from "next/image";
 import { navItems } from "@/lib/data";
 import MyProjects from "@/components/MyProjects";
 import Skills from "@/components/Skills";

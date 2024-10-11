@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Title from "./common/Title";
 import { IoArrowRedoOutline } from "react-icons/io5";
-import EducationCard from "./common/EducationCard";
 import ExperienceCard from "./common/ExperiencesCard";
 import { supabase } from "@/utils/supebase/client";
 import { experienceType } from "@/types";
@@ -39,7 +38,7 @@ const MyExperiences = () => {
       <div className="max-w-5xl mx-auto px-8 flex items-center justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full">
           {experiences?.map((exp) => (
-            <ExperienceCard experience={exp} />
+            <ExperienceCard key={exp.id} experience={exp} />
           ))}
         </div>
       </div>

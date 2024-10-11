@@ -41,7 +41,7 @@ const Education = () => {
          {
           educations?.map((item=>(
             
-            <EducationCard  education ={item}/>
+            <EducationCard key={item.id} education ={item}/>
           )))
          }
         

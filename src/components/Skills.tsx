@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { IoArrowRedoOutline } from "react-icons/io5";
 import Title from "./common/Title";
 import { CardHover } from "./ui/CardHoverEffect";
-import { skills } from "@/lib/data";
 import MagicButton from "./ui/MagicButton";
 import { FiRefreshCcw } from "react-icons/fi";
 import { supabase } from "@/utils/supebase/client";

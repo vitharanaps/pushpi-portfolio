@@ -1,5 +1,4 @@
 "use client";
-import { GoTerminal } from "react-icons/go";
 import { FaCode, FaRegUser } from "react-icons/fa6";
 import { TbTerminal2 } from "react-icons/tb";
 import { MdCastForEducation } from "react-icons/md";

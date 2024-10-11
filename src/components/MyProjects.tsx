@@ -4,7 +4,6 @@ import { projects } from "@/lib/data";
 import { FaLocationArrow } from "react-icons/fa6";
 import { PinContainer } from "./ui/Pin3d";
 import MagicButton from "./ui/MagicButton";
-import { FaDownload } from "react-icons/fa";
 import Title from "./common/Title";
 import { IoArrowRedoOutline } from "react-icons/io5";
 import { FiRefreshCcw } from "react-icons/fi";
