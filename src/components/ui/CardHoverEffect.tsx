@@ -7,6 +7,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
+import { IconProps } from "@/types";
 export const CardHover = ({
   items,
   className,
@@ -21,7 +22,7 @@ export const CardHover = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const iconLibraries: { [key: string]: any } = {
+  const iconLibraries: { [key: string]: React.ComponentType<IconProps> | undefined } = {
     ...FaIcons,
     ...SiIcons,
     ...AiIcons,

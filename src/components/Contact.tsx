@@ -81,7 +81,7 @@ const Contact = () => {
       <div className="max-w-5xl mx-auto px-8 flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-5 w-full">
           <div className="flex flex-col">
-            <h3 className="text-xl tracking-wide my-5">Hi, Let's Connect</h3>
+            <h3 className="text-xl tracking-wide my-5">Hi, Let &apos; s Connect</h3>
             <div className="my-3">
               <ul className="flex flex-col gap-3">
                 <li className="flex gap-3">

@@ -14,7 +14,10 @@ export interface infoTypes {
   }
 
 
-  
+  export interface IconProps {
+    size?: number;
+    className?: string;
+  }
 
   export interface cursorDataType {
     id: number,

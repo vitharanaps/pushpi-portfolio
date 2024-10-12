@@ -22,7 +22,7 @@ const About = () => {
       <div className="max-w-5xl mx-auto px-8 flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-5 w-full">
           <div className=" flex justify-center flex-col">
-            <h3 className="text-xl tracking-wide my-5">Hi , I'm {info?.username}</h3>
+            <h3 className="text-xl tracking-wide my-5">Hi , I &apos; m {info?.username}</h3>
 
             <p className="text-sm font-thin text-gray-300 my-2 leading-6   justify-center text-wrap ">
          {info?.myDesc}

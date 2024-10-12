@@ -13,9 +13,17 @@ import * as AiIcons from "react-icons/ai";
 import * as MdIcons from "react-icons/md";
 import * as RiIcons from "react-icons/ri";
 import Link from "next/link";
+import React from "react";
 
 const MyProjects = () => {
-  const iconLibraries: { [key: string]: any } = {
+  // Define the props that your icons will accept
+  interface IconProps {
+    size?: number;
+    className?: string;
+  }
+
+  // Cast the iconLibraries object to a type that includes IconProps
+  const iconLibraries: { [key: string]: React.ComponentType<IconProps> | undefined } = {
     ...FaIcons,
     ...SiIcons,
     ...AiIcons,
@@ -30,7 +38,7 @@ const MyProjects = () => {
           title="My"
           color_title="Recent Projects"
           icon={<IoArrowRedoOutline />}
-          className=" -rotate-3"
+          className="-rotate-3"
         />
         <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
           {projects.map((item) => (
@@ -38,16 +46,12 @@ const MyProjects = () => {
               className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] md:w-[30vw]"
               key={item.id}
             >
-              <PinContainer
-                title={item.title}
-                href="https://twitter.com/mannupaaji"
-              >
+              <PinContainer title={item.title} href="https://twitter.com/mannupaaji">
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] md:w-[30vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
-                  >
-                  </div>
+                  ></div>
                   <img
                     src={item.img}
                     alt="cover"
@@ -59,20 +63,20 @@ const MyProjects = () => {
                     {item.link === "" ? (
                       <></>
                     ) : (
-                      <Link href={item.link} className="flex ">
-                      <>
-                        <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                          Visit
-                        </p>
-                        <FaLocationArrow className="ms-3" color="#CBACF9" />
-
-                      </>
-                        </Link>
+                      <Link href={item.link} className="flex">
+                        <>
+                          <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                            Visit
+                          </p>
+                          <FaLocationArrow className="ms-3" color="#CBACF9" />
+                        </>
+                      </Link>
                     )}
                   </div>
 
                   <div className="flex items-center">
                     {item.iconLists.map((icon, index) => {
+                      // Cast the icon component to IconProps
                       const IconComponent = iconLibraries[icon];
                       return (
                         <div
@@ -84,7 +88,7 @@ const MyProjects = () => {
                         >
                           {IconComponent ? (
                             <IconComponent
-                              size={40}
+                              size={40} // Pass size prop
                               className="w-8 h-8 mx-auto group-hover:text-purple-500"
                             />
                           ) : (
@@ -114,14 +118,14 @@ const MyProjects = () => {
           ))}
         </div>
 
-        {projects && projects?.length > 6 && (
+        {projects?.length > 6 && (
           <div className="flex items-center justify-center mt-10">
             <MagicButton
               title="View More Projects"
               icon={<FiRefreshCcw />}
               position="right"
               otherClasses=""
-              containerStyles="my-6 "
+              containerStyles="my-6"
             />
           </div>
         )}

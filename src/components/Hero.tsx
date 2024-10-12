@@ -152,7 +152,7 @@ const Hero = () => {
               />
             </div>
             <div className="flex-1  w-full flex items-center justify-center relative">
-             <div className="shadow-2xl w-[400px] h-[400px] flex items-center justify-center rounded-full overflow-hidden">
+             <div className="shadow-2xl w-[250px] h-[250px] md:w-[400px] md:h-[400px] flex items-center justify-center rounded-full overflow-hidden">
               <Image
                 src={"/img/noAvatar.png"}
                 width={300}
