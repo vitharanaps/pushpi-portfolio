@@ -12,7 +12,7 @@ import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import { Typewriter } from "react-simple-typewriter";
 import { supabase } from "@/utils/supebase/client";
-import { cursorDataType , infoTypes} from "@/types";
+import { cursorDataType} from "@/types";
 import { useInfo } from "@/context/infoContext";
 import Link from "next/link";
 
