@@ -98,7 +98,7 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-            <p className="text-sm font-thin text-gray-300 text-wrap my-2 leading-6 justify-center">
+            <p className="text-sm font-thin text-gray-300 text-justify my-2 leading-6 justify-center">
               {info?.connectDesc}
             </p>
           </div>

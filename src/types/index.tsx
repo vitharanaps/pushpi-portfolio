@@ -1,62 +1,69 @@
-
-
 export interface infoTypes {
-    connectDesc: string | null;
-    created_at: string;
-    cursorText: string | null;
-    github: string | null;
-    id: number;
-    linkedIn: string | null;
-    myDesc: string | null;
-    myImage: string | null;
-    username: string;
-    textGenerator: string;
-  }
+  // connectDesc: string | null;
+  // created_at: string;
+  // cursorText: string | null;
+  // github: string | null;
+  // id: number;
+  // linkedIn: string | null;
+  // myDesc: string | null;
+  // myImage: string | null;
+  // username: string;
+  // textGenerator: string;
+  cvLink: string | null;
+  connectDesc: string | null;
+  created_at: string;
+  cursorText: string | null;
+  github: string | null;
+  id: number;
+  linkedIn: string | null;
+  myDesc: string | null;
+  myImage: string | null;
+  username: string;
+  textGenerator: string;
+}
 
+export interface IconProps {
+  size?: number;
+  className?: string;
+}
 
-  export interface IconProps {
-    size?: number;
-    className?: string;
-  }
+export interface cursorDataType {
+  id: number;
+  created_at: string;
+  text: string;
+}
 
-  export interface cursorDataType {
-    id: number,
-    created_at: string,
-    text :string,
-  }
+// Skills
 
-  // Skills
+export interface technologyTypes {
+  id: number;
+  skill: string;
+  icon_name: string;
+  created_at: string;
+}
 
-  export interface technologyTypes {
-    id:number;
-    skill: string;
-    icon_name: string;
-    created_at: string
-  }
-  
-
-  // experiences
+// experiences
 
 export interface experienceType {
-  id:number;
-  created_at :string;
+  id: number;
+  created_at: string;
   startDate: string;
-  endDate:string;
-  jobRole:string;
-  location:string;
-  img:string;
+  endDate: string;
+  jobRole: string;
+  location: string;
+  img: string;
   companyName: string;
 }
 
 export interface educationTypes {
-  id:number;
-  created_at :string;
+  id: number;
+  created_at: string;
   startDate: string;
-  endDate:string;
-  location:string;
-  img:string;
+  endDate: string;
+  location: string;
+  img: string;
   instituteName: string;
-  course:string;
+  course: string;
 }
 
 // contact

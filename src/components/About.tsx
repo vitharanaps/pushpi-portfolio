@@ -24,7 +24,7 @@ const About = () => {
           <div className=" flex justify-center flex-col">
             <h3 className="text-xl tracking-wide my-5">Hi , I &apos; m {info?.username}</h3>
 
-            <p className="text-sm font-thin text-gray-300 my-2 leading-6   justify-center text-wrap ">
+            <p className="text-sm font-thin text-gray-300 my-2 leading-6   justify-center text-justify ">
          {info?.myDesc}
             </p>
      

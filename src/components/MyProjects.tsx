@@ -47,7 +47,7 @@ const MyProjects = () => {
               key={item.id}
             >
               <PinContainer title={item.title} href="https://twitter.com/mannupaaji">
-                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] md:w-[30vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                <div className="relative flex items-center justify-center sm:w-96 w-[80vw] md:w-[30vw] overflow-hidden h-[30vh] lg:h-[30vh] mb-10">
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                     style={{ backgroundColor: "#13162D" }}
@@ -76,7 +76,6 @@ const MyProjects = () => {
 
                   <div className="flex items-center">
                     {item.iconLists.map((icon, index) => {
-                      // Cast the icon component to IconProps
                       const IconComponent = iconLibraries[icon];
                       return (
                         <div
@@ -88,7 +87,7 @@ const MyProjects = () => {
                         >
                           {IconComponent ? (
                             <IconComponent
-                              size={40} // Pass size prop
+                              size={40} 
                               className="w-8 h-8 mx-auto group-hover:text-purple-500"
                             />
                           ) : (

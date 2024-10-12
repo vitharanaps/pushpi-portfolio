@@ -12,8 +12,9 @@ import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import { Typewriter } from "react-simple-typewriter";
 import { supabase } from "@/utils/supebase/client";
-import { cursorDataType } from "@/types";
+import { cursorDataType , infoTypes} from "@/types";
 import { useInfo } from "@/context/infoContext";
+import Link from "next/link";
 
 export const docLinks = [
   {
@@ -71,7 +72,7 @@ export const docLinks = [
 ];
 
 const Hero = () => {
-  const {  info } = useInfo();
+  const { info } = useInfo();
   const [myCursorData, setMyCursorData] = useState<cursorDataType[]>();
 
   useEffect(() => {
@@ -143,6 +144,9 @@ const Hero = () => {
                   //   onType={handleType}
                 />
               </span>
+              <Link 
+              href={info ? info?.cvLink : "/#"}
+              >
               <MagicButton
                 title="Download My CV"
                 icon={<FaDownload />}
@@ -150,6 +154,8 @@ const Hero = () => {
                 otherClasses=""
                 containerStyles="my-6 "
               />
+              </Link>
+           
             </div>
             <div className="flex-1  w-full flex items-center justify-center relative">
              <div className="shadow-2xl w-[250px] h-[250px] md:w-[400px] md:h-[400px] flex items-center justify-center rounded-full overflow-hidden">
